@@ -1,0 +1,89 @@
+
+import java.util.Scanner;
+
+public class Quiz {
+
+	public static void main(String[] args) {
+
+		public class Answer5 {
+
+			public static void main(String[] args) {
+			int totalRecord = 150;
+			int recordPerPage = 5;
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter number");
+			char enter = sc.next().charAt(0);
+			switch(enter) {
+			case 'a':
+			case'A':
+				recordPerPage = 10;
+				break;
+			case 'b':
+			case'B':
+				recordPerPage = 20;
+				break;
+			case 'c':
+			case'C':
+				recordPerPage = 50;
+				break;
+				
+			case 'd':
+			case'D':
+				recordPerPage = 100;
+				break;
+			case 'e':
+			case'E':
+				recordPerPage = 200;
+				break;
+			}
+			
+			if( totalRecord %recordPerPage ==0 ) {
+				for(int i = 1 ;i<=totalRecord/recordPerPage ;i++) {
+					System.out.print("|Page" + i + ":" + recordPerPage);
+				}
+				System.out.print("|");
+			}else {
+				int page = totalRecord / recordPerPage;
+				for(int i = 1 ;i<=totalRecord/recordPerPage ;i++) {
+					System.out.print("|Page" + i + ":" + recordPerPage);
+				}
+				System.out.print("|Page" + (page+ 1)+":" + totalRecord%recordPerPage+ "|");
+			}
+			}
+
+		}
+		/////////////////////
+
+		import java.util.Scanner;
+
+		public class Answer1 {
+
+			public static void main(String[] args) {
+				Scanner sc = new Scanner(System.in);
+				System.out.println("hello:");
+			char letter = sc.next().charAt(0);
+//				String text = sc.nextLine();
+				switch(letter){
+				case 'a':
+				case'A':
+					System.out.println("You order BayChha");
+					break;
+				case 'b':
+				case'B':
+					System.out.println("You order Ice Tea");
+					break;
+				case 'c':
+				case'C':
+					System.out.println("You order Soup");
+					break;
+				default:
+					System.out.println("Out of order");
+					
+				}
+			}
+
+		}
+
+	}
+
+}
